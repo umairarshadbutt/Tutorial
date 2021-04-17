@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 function Greeting() {
-  return <h1>
-    Umair is here, and this my first component
-  </h1>
+  return (
+    <div>
+      <h1>Hello World</h1>
+    </div>
+  );
 }
 
 ReactDom.render(<Greeting/>, document.getElementById('root'));
