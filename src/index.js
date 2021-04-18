@@ -2,33 +2,35 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 import './index.css'
+const author = "Amir Gazdar";
+const title = "Qurbani sy Pehly"
+const img = 'https://javedahmedghamidi.org/m/thumb/book/bf51770e-42df-46a4-bbf4-5dcd8d1047b0.jpg';
 function Greeting() {
   return (
     <div className='booklist'>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book job='Developer'/>
+      <Book title='Random title' number={22}/>
     </div>
   );
 }
 
 
 
-const Book = () => {
+const Book = (props) => {
   return (
     <article className='book'>
-      <Image></Image>
-      <Title />
-      <Author />
+      <img src='https://javedahmedghamidi.org/m/thumb/book/bf51770e-42df-46a4-bbf4-5dcd8d1047b0.jpg' alt='' />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+      <p>{props.job}</p>
+      <p>{props.title}</p>
+      <p>{props.number}</p>
     </article>
   );
 }
 const Image = () =>{
  return <img 
-  src='https://javedahmedghamidi.org/m/thumb/book/bf51770e-42df-46a4-bbf4-5dcd8d1047b0.jpg' 
+  src='' 
   alt=''/>
 }
 
