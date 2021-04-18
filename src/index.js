@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+
+import './index.css'
 function Greeting() {
   return (
-    <div>
+    <div className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </div>
   );
@@ -12,7 +19,7 @@ function Greeting() {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image></Image>
       <Title />
       <Author />
