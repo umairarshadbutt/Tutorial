@@ -2,14 +2,23 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 import './index.css'
-const author = "Amir Gazdar";
-const title = "Qurbani sy Pehly"
-const img = 'https://javedahmedghamidi.org/m/thumb/book/bf51770e-42df-46a4-bbf4-5dcd8d1047b0.jpg';
+
+const firstBook = {
+  img: 'https://javedahmedghamidi.org/m/thumb/book/bf51770e-42df-46a4-bbf4-5dcd8d1047b0.jpg',
+  title: 'Qurbani sy Pehly',
+  author: 'Amir Gazdar'
+};
+
+const secondBook = {
+  img: 'https://javedahmedghamidi.org/m/thumb/book/ab0b2b84-21d2-4294-80bd-faba96b2439d.jpg',
+  title: 'Introduction to the Qur’ān ',
+  author: 'Dr Shehzaad Saleem'
+};
 function Greeting() {
   return (
     <div className='booklist'>
-      <Book job='Developer'/>
-      <Book title='Random title' number={22}/>
+      <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}/>
+      <Book img={secondBook.img} title={secondBook.title} author={secondBook.author}/>
     </div>
   );
 }
@@ -19,12 +28,9 @@ function Greeting() {
 const Book = (props) => {
   return (
     <article className='book'>
-      <img src='https://javedahmedghamidi.org/m/thumb/book/bf51770e-42df-46a4-bbf4-5dcd8d1047b0.jpg' alt='' />
-      <h1>{title}</h1>
-      <h4>{author}</h4>
-      <p>{props.job}</p>
-      <p>{props.title}</p>
-      <p>{props.number}</p>
+      <img src={props.img} alt='' />
+      <h1>{props.title}</h1>
+      <h4>{props.author}</h4>
     </article>
   );
 }
